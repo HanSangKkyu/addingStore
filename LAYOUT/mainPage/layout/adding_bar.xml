@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/upper_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#7b3b80">
+        <ImageView
+            android:src="@drawable/menu"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="ADDING STORE"
+            android:textSize="27sp"
+            android:fontFamily="monospace"
+            android:shadowRadius="25.0"
+            android:shadowColor="#ee74f7"
+            android:textColor="#fae7fa"
+            android:layout_centerInParent="true"
+            android:layout_width="220dp"
+            android:layout_height="80dp" />
+        <ImageView
+            android:src="@drawable/search"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="#fff"
+        android:id="@+id/select_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/cast"
+            android:text="캐스트"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/fund"
+            android:text="펀딩"
+            android:textColor="#848484"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+        <TextView
+            android:textColor="#848484"
+            android:id="@+id/report"
+            android:text="레포트"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+        <TextView
+            android:textColor="#848484"
+            android:id="@+id/setting"
+            android:text="설정"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+    </LinearLayout>
+    <View
+        android:background="#e2e3e3"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+</LinearLayout>
