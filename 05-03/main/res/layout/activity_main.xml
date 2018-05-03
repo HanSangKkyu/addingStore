@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090017"
+    tools:context="com.example.han.adding.MainActivity">
+
+    <ImageView
+        android:id="@+id/homelogo"
+        android:layout_width="400dp"
+        android:layout_height="450dp"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:paddingBottom="50dp"
+        android:src="@drawable/homelogo" />
+    <LinearLayout
+        android:layout_above="@+id/button"
+        android:layout_marginBottom="35dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:onClick="goCast"
+            android:src="@drawable/casticon"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <TextView
+            android:layout_gravity="center"
+            android:text="CAST"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#fae7fa"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="35dp"
+        android:layout_above="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:onClick="goFund"
+            android:id="@+id/cast"
+            android:src="@drawable/fundicon"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <TextView
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="FUND"
+            android:textSize="20dp"
+            android:textColor="#fae7fa"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_above="@+id/signin"
+        android:layout_marginBottom="35dp"
+        android:layout_centerHorizontal="true"
+        android:background="#7b3b80"
+        android:textColor="#fae7fa"
+        android:textSize="30dp"
+        android:text="LOGIN"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:id="@+id/button" />
+
+    <TextView
+        android:id="@+id/signin"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#fae7fa"
+        android:text="회원가입을 하시려면 이곳을 눌러주세요."
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+</RelativeLayout>
