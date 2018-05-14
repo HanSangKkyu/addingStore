@@ -8,5 +8,5 @@
 <다운로드 방법>
 
 1. 안드로이드 스튜디오 실행
-2. 프로젝트 만들기 company : com.example.han.adding 로 설정
+2. 프로젝트 만들기 company : han.example.com.adding 로 설정
 (package명을 위 처럼 설정했다면 다음부터 main 폴더만 덮어쓰기 하면된다.)
