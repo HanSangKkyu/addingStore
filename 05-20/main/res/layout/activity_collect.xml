@@ -13,12 +13,12 @@
         android:background="#7b3b80">
 
         <ImageView
-            android:onClick="goMenu"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="25dp"
+            android:onClick="goMenu"
             android:src="@drawable/menu" />
 
         <TextView
@@ -35,12 +35,12 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:onClick="showSearch"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="25dp"
+            android:onClick="showSearch"
             android:src="@drawable/search" />
     </RelativeLayout>
 
@@ -52,49 +52,49 @@
         android:orientation="horizontal">
 
         <TextView
-            android:onClick="goCast"
             android:id="@+id/cast"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
+            android:onClick="goCast"
             android:text="캐스트"
             android:textColor="#000"
             android:textSize="25sp" />
 
         <TextView
-            android:onClick="goFund"
             android:id="@+id/fund"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
+            android:onClick="goFund"
             android:text="펀딩"
             android:textColor="#848484"
             android:textSize="25sp" />
 
         <TextView
-            android:onClick="goReport"
             android:id="@+id/report"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
+            android:onClick="goReport"
             android:text="레포트"
             android:textColor="#848484"
             android:textSize="25sp" />
 
         <TextView
-            android:onClick="goSetting"
             android:id="@+id/setting"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
+            android:onClick="goSetting"
             android:text="설정"
             android:textColor="#848484"
             android:textSize="25sp" />

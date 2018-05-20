@@ -100,6 +100,9 @@ public class Collect extends AppCompatActivity {
         initTextColor();
         reportText.setTextColor(Color.rgb(0, 0, 0));
 
+        startActivity(new Intent(this, ProjectDetailActivity.class));
+
+
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment, castFragment, "setting").commit();
         fragmentTransaction.setCustomAnimations(R.anim.anim_slide_in_left, R.anim.anim_slide_in_left);

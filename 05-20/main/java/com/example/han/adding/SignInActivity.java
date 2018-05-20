@@ -50,4 +50,12 @@ public class SignInActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
+    public void fundThisProj(View view) {
+
+        // 프로젝트 투자 화면으로 넘어가기
+    }
+
+
 }
