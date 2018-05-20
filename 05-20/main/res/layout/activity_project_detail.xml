@@ -71,6 +71,12 @@
                 android:text="게임" />
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
