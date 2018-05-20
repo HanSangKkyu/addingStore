@@ -95,27 +95,8 @@ public class ProjectDetailActivity extends AppCompatActivity {
             bt2[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // Alert을 이용해 종료시키기
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(ProjectDetailActivity.this);
-                    dialog.setTitle("진행 상황")
-                            .setMessage("로그인 기능")
-                            .setPositiveButton("오류 보고", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    finish();
-                                }
-                            })
-                            .setNeutralButton("확인", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                }
-                            })
-                            .setNegativeButton("다운", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    //
-                                }
-                            }).create().show();
+                    ShowDialog showDialog = new ShowDialog(v.getContext());
+                    showDialog.show();
 
                 }
             });
@@ -145,27 +126,8 @@ public class ProjectDetailActivity extends AppCompatActivity {
             bt3[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // Alert을 이용해 종료시키기
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(ProjectDetailActivity.this);
-                    dialog.setTitle("진행 상황")
-                            .setMessage("로그인 기능")
-                            .setPositiveButton("오류 보고", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    finish();
-                                }
-                            })
-                            .setNeutralButton("확인", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                }
-                            })
-                            .setNegativeButton("다운", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    //
-                                }
-                            }).create().show();
+                    ShowDialog showDialog = new ShowDialog(v.getContext());
+                    showDialog.show();
 
                 }
             });
@@ -175,4 +137,8 @@ public class ProjectDetailActivity extends AppCompatActivity {
     }
 
 
+    public void fundThisProj(View view) {
+        PayDialog payDialog = new PayDialog(this);
+        payDialog.show();
+    }
 }
