@@ -7,20 +7,30 @@ class UserInfo {
     int age;
     int gender;
     String job;
+    int cash;
     String favorite;
 
     public UserInfo() {
         //
     }
 
-    public UserInfo(String email, String pw, String name, int age, int gender, String job, String favorite) {
+    public UserInfo(String email, String pw, String name, int age, int gender, String job, int cash, String favorite) {
         this.email = email;
         this.pw = pw;
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.job = job;
+        this.cash = cash;
         this.favorite = favorite;
+    }
+
+    public void setCash(int cash) {
+        this.cash = cash;
+    }
+
+    public int getCash() {
+        return cash;
     }
 
     public String getEmail() {

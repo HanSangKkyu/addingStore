@@ -4,18 +4,18 @@ public class CastClass {
     private int cnum;
     private String title;
     private String content;
-    private String preperationdate;
-    private String member;
+    private String date;
+    private String image;
 
     private boolean state;
     private String str;
 
-    public CastClass(int cnum, String title, String content, String preperationdate, String member, boolean state, String str) {
+    public CastClass(int cnum, String title, String content, String date, String image, boolean state, String str) {
         this.cnum = cnum;
         this.title = title;
         this.content = content;
-        this.preperationdate = preperationdate;
-        this.member = member;
+        this.date = date;
+        this.image = image;
         this.state = state;
         this.str = str;
     }
@@ -47,20 +47,20 @@ public class CastClass {
         this.content = content;
     }
 
-    public String getPreperationdate() {
-        return preperationdate;
+    public String getDate() {
+        return date;
     }
 
-    public void setPreperationdate(String preperationdate) {
-        this.preperationdate = preperationdate;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public String getMember() {
-        return member;
+    public String getImage() {
+        return image;
     }
 
-    public void setMember(String member) {
-        this.member = member;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public boolean isState() {

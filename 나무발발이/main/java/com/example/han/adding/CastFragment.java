@@ -47,13 +47,13 @@ public class CastFragment extends Fragment {
                 "ap-northeast-2:a03da40d-6e0a-40f9-9510-6a5fb5c4a37a", // 자격 증명 풀 ID
                 Regions.AP_NORTHEAST_2 // 리전
         );
-        LambdaInvokerFactory factory = new LambdaInvokerFactory(getActivity(),
+        LambdaInvokerFactory factory = new LambdaInvokerFactory(getActivity().getApplicationContext(),
                 Regions.AP_NORTHEAST_2, cognitoProvider);
         Log.i("asdfgh", factory+"");
 
         final ShowingCastListInterface showingCastListInterface = factory.build(ShowingCastListInterface.class, new LambdaDataListBinder(new TypeToken<ArrayList<CastClass>>(){}.getType()));
 
-        CastRequestClass request = new CastRequestClass(0, 20);
+        final CastRequestClass request = new CastRequestClass(0, 20);
         new AsyncTask<CastRequestClass, Void, ArrayList<CastClass>>() {
             @Override
             protected ArrayList<CastClass> doInBackground(CastRequestClass... params) {
@@ -62,6 +62,7 @@ public class CastFragment extends Fragment {
                 try {
                     return showingCastListInterface.addingShowCast(params[0]);
                 } catch (LambdaFunctionException lfe) {
+                    Log.v("asdf", "d");
                     Log.e("Tag", "Failed to invoke echo", lfe);
                     return null;
                 }
@@ -70,14 +71,14 @@ public class CastFragment extends Fragment {
             @Override
             protected void onPostExecute(ArrayList<CastClass> result) {
                 if (result == null) {
+
                     return;
                 }
                 for (int i = 0; i < result.size(); i++) {
                     if (result.get(i).isState()) {
-                        System.out.println(result.get(i).getTitle());
-                        Toast.makeText(getActivity(), result.get(i).getTitle(), Toast.LENGTH_LONG).show();
+                        Log.v("asdf", result.get(i).getTitle());
                     } else {
-                        Toast.makeText(getActivity(), result.get(i).getStr(), Toast.LENGTH_LONG).show();
+                        Log.v("asdf", result.get(i).getTitle());
                     }
                 }
 
