@@ -40,7 +40,7 @@ public class SignInActivity extends AppCompatActivity {
     AdapterSpinner jobAdapter;
     AdapterSpinner favoAdapter;
     final String[] jobItemArray = {"예술", "사무직", "자영업", "서비스직", "생산직", "농/축산업", "학생", "기타"};
-    final String[] favoItemArray = {"건강/운동", "게임", "교육", "금융", "날씨", "뉴스/잡지", "쇼핑", "도구", "스포츠", "음악,동영상", "소셜", "사진", "지도/내비게이션"};
+    final String[] favoItemArray = {"건강", "게임", "교육", "금융", "쇼핑", "스포츠", "미디어", "소셜"};
 
 
     @Override

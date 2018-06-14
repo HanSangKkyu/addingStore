@@ -100,7 +100,7 @@ public class Collect extends AppCompatActivity {
         initTextColor();
         reportText.setTextColor(Color.rgb(0, 0, 0));
 
-        startActivity(new Intent(this, ProjectDetailActivity.class));
+        startActivity(new Intent(this, AnalActivity.class));
 
 //        이제 설정 창을 만들어야 한다.
 //        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();

@@ -36,7 +36,7 @@ public class FundFragment extends Fragment {
     LinearLayout searchBox;
     //  int layoutWidth = 1000;
     //   int layoutHeight = 140;
-    final String[] favoItemArray = {"건강/운동", "게임", "교육", "금융", "날씨", "뉴스/잡지", "쇼핑", "도구", "스포츠", "음악,동영상", "소셜", "사진", "지도/내비게이션"};
+    final String[] favoItemArray = {"건강", "게임", "교육", "금융", "쇼핑", "스포츠", "미디어", "소셜"};
     private Spinner favorite;
     private ArrayList<String> favoItem;
     private AdapterSpinner1 favoAdapter;
