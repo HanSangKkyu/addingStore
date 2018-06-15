@@ -13,14 +13,13 @@ public class AnalActivity extends AppCompatActivity {
     Button scrum;
     Fragment analyzeFragment;
     Fragment scrumFragment;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anal);
-        x = (Button) findViewById(R.id.x);
-        analyze = (Button) findViewById(R.id.analyze);
-        scrum = (Button) findViewById(R.id.scrum);
+        x = (Button)findViewById(R.id.x);
+        analyze = (Button)findViewById(R.id.analyze);
+        scrum = (Button)findViewById(R.id.scrum);
         analyzeFragment = new Fragment();
         scrumFragment = new Fragment();
         x.setOnClickListener(new View.OnClickListener() {

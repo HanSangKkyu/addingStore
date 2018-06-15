@@ -56,7 +56,7 @@ public class AddDialog extends Dialog {
     Button fileUploadBtn;
     Button exec;
     int stateCode;
-    static String fileStr1; // 업로드 파일 url 주소
+    static String fileStr1 = ""; // 업로드 파일 url 주소
 
     Activity mActivity;
 
@@ -131,6 +131,10 @@ public class AddDialog extends Dialog {
                 }
 
                 Log.v("스크럼넘버", scrumNum + "");
+                Log.v("파일", fileStr1 + " 이다");
+                if (fileStr1.length() == 0) {
+                    fileStr1 = "0";
+                }
                 RegisterScrumRequest request = new RegisterScrumRequest(scrumNum, projNum, title.getText().toString(), stateCode, "", desc.getText().toString(), fileStr1);
 
                 new AsyncTask<RegisterScrumRequest, Void, Boolean>() {

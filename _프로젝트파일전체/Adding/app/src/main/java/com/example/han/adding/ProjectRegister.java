@@ -72,7 +72,7 @@ public class ProjectRegister extends AppCompatActivity {
     Spinner favorite; // 관심분야
     ArrayList<String> favoItem;
     AdapterSpinner favoAdapter;
-    final String[] favoItemArray = {"건강/운동", "게임", "교육", "금융", "날씨", "뉴스/잡지", "쇼핑", "도구", "스포츠", "음악,동영상", "소셜", "사진", "지도/내비게이션"};
+    final String[] favoItemArray = {"건강", "게임", "교육", "금융", "쇼핑", "스포츠", "미디어", "소셜"};
 
 
     String kind; // 분야
@@ -168,8 +168,8 @@ public class ProjectRegister extends AppCompatActivity {
 
         // 만약 수정이라면
         Intent intent = getIntent();
-        projNum = intent.getIntExtra("projNum", -1);
-        if (projNum != -1) {
+        projNum = intent.getIntExtra("projNum", 0);
+        if (projNum != 0) {
 
 
             CognitoCachingCredentialsProvider cognitoProvider = new CognitoCachingCredentialsProvider(
@@ -242,6 +242,7 @@ public class ProjectRegister extends AppCompatActivity {
 
 
     public void register(View view) {
+        Log.v("들어간 입력", "클릭함");
         if (pimgUrl == null) {
             return;
         }
@@ -260,8 +261,12 @@ public class ProjectRegister extends AppCompatActivity {
 
 
         final RegistProjInterface registProjInterface = factory.build(RegistProjInterface.class);
+        if (fundGoal.getText().toString().length() == 0) {
+            return;
+        }
         int temp = Integer.parseInt(fundGoal.getText().toString());
 
+        Log.v("들어간 정보", projNum + " " + user.getEmail() + " " + String.valueOf(pName.getText()) + " " + 0 + " " + kind + " " + myear + "-" + mmonth + "-" + mdayOfMonth + " " + temp + " " + pimgUrl.toString() + " " + String.valueOf(pIntro.getText()));
         RegisterProjRequest request = new RegisterProjRequest(projNum, user.getEmail(), String.valueOf(pName.getText()), 0, kind, myear + "-" + mmonth + "-" + mdayOfMonth,
                 temp, pimgUrl.toString(), String.valueOf(pIntro.getText()));
 
